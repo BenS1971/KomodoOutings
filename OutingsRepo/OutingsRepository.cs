@@ -36,7 +36,7 @@ public class OutingsRepository
             return false;
         }
         
-        }
+    }
     
 
     // Delete them outings (Bye bye.)...

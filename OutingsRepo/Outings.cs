@@ -35,4 +35,9 @@ public enum OutingType
         TotalCostOfOuting = TotalCostOfOuting;
         TypeOfOuting = TypeOfOuting;
     }
+
+    internal static void Add(Outings outings)
+    {
+        throw new NotImplementedException();
+    }
 }

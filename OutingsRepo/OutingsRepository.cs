@@ -7,7 +7,7 @@ public class OutingsRepository
     //Create outings...
     public void  AddContentToList(Outings outings)
     {
-        _outings.Add(outings);
+        Outings.Add(outings);
     }
     //Read outings...
     public List<Outings> GetOutingList(Outings);
@@ -15,8 +15,10 @@ public class OutingsRepository
         return new List<Outings>(_listOfOutings);
     }
 
-    // Update outings...
-    public bool UpdateExistingOutings(string outings, Outings newOutings)
+
+
+// Update outings...
+public bool UpdateExistingOutings(string outings, Outings newOutings)
     {
         //Find that outings content...
         Outings oldContent = GetOutingList(outings);

@@ -2,17 +2,20 @@ namespace OutingsRepo.repository;
 
 public class OutingsRepository
 {
+    
     private List<Outings> _listOfOutings = new List<Outings>();
     
     //Create outings...
     public void  AddContentToList(Outings outings)
     {
-        Outings.Add(outings);
+        _listOfOutings.Add(outings);
     }
     //Read outings...
-    public List<Outings> GetOutingList(Outings);
+     public List<Outings> GetOutingList()
     {
+        
         return new List<Outings>(_listOfOutings);
+        
     }
 
 
@@ -44,16 +47,16 @@ public bool UpdateExistingOutings(string outings, Outings newOutings)
     // Delete them outings (Bye bye.)...
     public bool RemoveOutingsFromList(string outings)
     {
-        Outings content = GetOutingList();
+        Outings content = GetOutingFromList();
         if (content == null)
         {
             return false;
         }
 
-        int initial = listOfOutings.Count;
-        _listOfContent.Remove(content);
+        int initial = _listOfOutings.Count;
+        _listOfOutings.Remove(content);
 
-        if (initialCount > listOfOutings.Count)
+        if (initialCount > _listOfOutings.Count)
         {
             return true;
         }
@@ -68,11 +71,12 @@ public bool UpdateExistingOutings(string outings, Outings newOutings)
     {
         foreach (Outings content in _listOfOutings)
         {
-            if (content.Outings == outings)
+            if (content.outings == outings)
             {
                 return content;
             }
         }
         return null;
     }
+    
 }

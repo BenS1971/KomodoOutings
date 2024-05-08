@@ -15,9 +15,10 @@ public enum OutingType
 //This is the repository for the Komodo outings with the POCOs...
  public class Outings
 {
+    public  int OutingID { get; set;  }
     public DateTime OutingDate { get; set;}
 
-    public double NumberOfPeople { get; set; }
+    public int NumberOfPeople { get; set; }
 
     public double CostPerPerson { get; set;}
 
@@ -36,8 +37,5 @@ public enum OutingType
         TypeOfOuting = TypeOfOuting;
     }
 
-    internal static void Add(Outings outings)
-    {
-        throw new NotImplementedException();
-    }
+ 
 }

@@ -1,5 +1,6 @@
-namespace KomodoOutings.console;
 
+
+namespace KomodoOutings.console;
 public class ProgramUI
 {
     //The method that run and/or starts the app...
@@ -7,11 +8,13 @@ public class ProgramUI
     {
         Menu();
     }
-
-
     //The Menu, Monsieur.
     private void Menu()
     {
+        bool keepRunning = true;
+
+        while (keepRunning)
+        {
         //Display the options 2 the user...
         System.Console.WriteLine("Welcome to the Komodo Outings Application. Please select a menu option:\n" + 
             "1. Create a new outing\n" +
@@ -29,19 +32,43 @@ public class ProgramUI
             switch (input)
             {
                 case "1":
+                    //Creating an outing
+                    CreateNewOuting();
                     break;
                 case "2":
+                    //Looking at existing outing...
+             
                     break;
                 case "3":
+                    //Looking at outing list, except with the TYPE of outing.
+                  
                     break;
                 case "4":
+                    //Update an outing.
+                   
                     break;
                 case "5":
+                    //Deleting an outing.
+                    
                     break;
                 case "6":
+                    System.Console.WriteLine("Goodbye.");
+                    keepRunning = false;
                     break;
+                default:
+                    System.Console.WriteLine("Please enter a valid number.");
+                    break;
+                    }
 
-            }
-
+                    System.Console.WriteLine("Please press any key to continue...");
+                    System.Console.ReadKey();
+                    System.Console.Clear();
+        }
     }
+    private void CreateNewOuting();
+    {
+        System.Console.Clear;
+        Outings newOuting = new Outings();
+    }
+  
 }

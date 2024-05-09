@@ -6,7 +6,7 @@ public class OutingsRepository
     private List<Outings> _listOfOutings = new List<Outings>();
     
     //Create outings...
-    public void  AddContentToList(Outings outings)
+    public void  CreateNewOuting(Outings outings)
     {
         _listOfOutings.Add(outings);
     }
@@ -56,7 +56,7 @@ public bool UpdateExistingOutings(string outings, Outings newOutings)
         int initial = _listOfOutings.Count;
         _listOfOutings.Remove(content);
 
-        if (initialCount > _listOfOutings.Count)
+        if (InitialCount > _listOfOutings.Count)
         {
             return true;
         }
@@ -71,7 +71,7 @@ public bool UpdateExistingOutings(string outings, Outings newOutings)
     {
         foreach (Outings content in _listOfOutings)
         {
-            if (content.outings == outings)
+            if (outings content == outings)
             {
                 return content;
             }

@@ -11,7 +11,7 @@ public class OutingsRepository
         _listOfOutings.Add(outings);
     }
     //Read outings...
-     public List<Outings> GetOutingList()
+     public List<Outings> GetOutingFromList()
     {
         
         return new List<Outings>(_listOfOutings);
@@ -24,7 +24,7 @@ public class OutingsRepository
 public bool UpdateExistingOutings(string outings, Outings newOutings)
     {
         //Find that outings content...
-        Outings oldContent = GetOutingList(outings);
+        Outings oldContent = GetOutingFromList(outings);
 
         //...And then UPDATE that outing content. Okay? Okay.
         if (oldContent != null)
@@ -67,16 +67,17 @@ public bool UpdateExistingOutings(string outings, Outings newOutings)
     }
     
     //Helper Methods (NOT tuna or hamburger!!)
-    private Outings? GetOutingsFromList(string outings)
+    private Outings? GetOutingFromList(string outings)
     {
         foreach (Outings content in _listOfOutings)
         {
-            if (outings content == outings)
+            if (Outings == outings)
             {
                 return content;
             }
-        }
+        
         return null;
+        }
     }
     
 }

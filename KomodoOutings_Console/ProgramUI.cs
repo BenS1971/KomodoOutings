@@ -1,7 +1,6 @@
 
+using System.ComponentModel.Design;
 
-using Microsoft.VisualBasic.FileIO;
-using OutingsRepo.repository;
 
 namespace KomodoOutings.console;
 public class ProgramUI
@@ -80,7 +79,8 @@ public class ProgramUI
     private void CreateNewOuting()
     {
         System.Console.Clear();
-        Outings newOuting = new Outings();
+        Console.WriteLine("Please enter an Outing ID Number:");
+        System.Console.ReadLine();
     }
     
     //Get outing from list...
@@ -95,6 +95,7 @@ public class ProgramUI
     public void DisplayOuting()
     {
         System.Console.Clear();
+        System.Console.WriteLine("Please enter the Outing ID that you would like to see: ");
 
     }
 
@@ -102,6 +103,7 @@ public class ProgramUI
     public void UpdateExistingOutings()
     {
         System.Console.Clear();
+        System.Console.WriteLine("Please enter the Outing ID of the outing you want to update: ");
      
     }
 
@@ -109,7 +111,7 @@ public class ProgramUI
     public void RemoveOutingsFromList()
     {
         System.Console.Clear();
-     
+        System.Console.WriteLine("Please enter the outing number of the outing you want to delete: ");
     }
   
 }

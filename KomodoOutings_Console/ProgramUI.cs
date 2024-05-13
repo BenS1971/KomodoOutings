@@ -69,10 +69,7 @@ public class ProgramUI
         }
     }
 
-    private void DisplayOutingList()
-    {
-        
-    }
+ 
 
     //Create new outing...
 
@@ -88,6 +85,7 @@ public class ProgramUI
     {
         System.Console.Clear();
         Console.WriteLine("Please enter an outing to view by Outing ID or Outing Type.");
+        System.Console.ReadLine();
     }
     //Display an outing...
         
@@ -96,6 +94,7 @@ public class ProgramUI
     {
         System.Console.Clear();
         System.Console.WriteLine("Please enter the Outing ID that you would like to see: ");
+        System.Console.ReadLine();
 
     }
 
@@ -104,7 +103,7 @@ public class ProgramUI
     {
         System.Console.Clear();
         System.Console.WriteLine("Please enter the Outing ID of the outing you want to update: ");
-     
+        System.Console.ReadLine();
     }
 
     // Delete an outing...
@@ -112,6 +111,7 @@ public class ProgramUI
     {
         System.Console.Clear();
         System.Console.WriteLine("Please enter the outing number of the outing you want to delete: ");
+        System.Console.ReadLine();
     }
   
 }
